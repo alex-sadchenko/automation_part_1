@@ -13,6 +13,7 @@ package by.automation.classes.student;
 //d) список учебной группы.
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Student {
     private int id;
@@ -55,7 +56,7 @@ public class Student {
     public void setName(String name) {
         this.name = name;
     }
-    
+
     public void setPatronymic(String patronymic) {
         this.patronymic = patronymic;
     }
@@ -122,6 +123,28 @@ public class Student {
 
     public String getGroupNumber() {
         return groupNumber;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return id == student.id &&
+                year == student.year &&
+                Objects.equals(surname, student.surname) &&
+                Objects.equals(name, student.name) &&
+                Objects.equals(patronymic, student.patronymic) &&
+                Objects.equals(dateOfBirth, student.dateOfBirth) &&
+                Objects.equals(address, student.address) &&
+                Objects.equals(phoneNumber, student.phoneNumber) &&
+                Objects.equals(faculty, student.faculty) &&
+                Objects.equals(groupNumber, student.groupNumber);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, surname, name, patronymic, dateOfBirth, address, phoneNumber, faculty, year, groupNumber);
     }
 
     @Override
