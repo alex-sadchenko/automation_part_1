@@ -5,13 +5,13 @@ import models.ExperimentalType;
 
 public class ExperimentalPlane extends Plane {
 
-    private ExperimentalType experimentalTypes;
+    private ExperimentalType experimentalType;
     private ClassificationLevel classificationLevel;
 
     public ExperimentalPlane(String model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity,
-                             ExperimentalType experimentalTypes, ClassificationLevel classificationLevel) {
+                             ExperimentalType experimentalType, ClassificationLevel classificationLevel) {
         super(model, maxSpeed, maxFlightDistance, maxLoadCapacity);
-        this.experimentalTypes = experimentalTypes;
+        this.experimentalType = experimentalType;
         this.classificationLevel = classificationLevel;
     }
 
@@ -35,8 +35,9 @@ public class ExperimentalPlane extends Plane {
 
     @Override
     public String toString() {
-        return "experimentalPlane{" +
-                "model='" + model + '\'' +
-                '}';
+        return super.toString().replace("}",
+                ", type=" + experimentalType +
+                        ", classificationLevel=" + classificationLevel +
+                        '}');
     }
 }
