@@ -1,4 +1,4 @@
-package by.automation.collections.optionaltasks.task2;
+package by.automation.collections.optionaltasks.numberreverse;
 
 import java.util.Stack;
 

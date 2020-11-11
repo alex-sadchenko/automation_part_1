@@ -1,4 +1,4 @@
-import models.MilitaryType;
+import classifications.MilitaryType;
 import planes.MilitaryPlane;
 import planes.PassengerPlane;
 import planes.Plane;
@@ -40,17 +40,18 @@ public class Runner {
 
     public static void main(String[] args) {
         Airport airport = new Airport(planes);
-        Airport militaryPlane = new Airport(airport.getMilitaryPlanes());
-        Airport passengerPlane = new Airport(airport.getPassengerPlane());
 
-        System.out.println("Military plane sorted by max distance: " + militaryPlane
+        System.out.println("Military plane sorted by max distance: " + airport
                 .sortByMaxDistance()
-                .toString());
-        System.out.println("Passenger plane sorted by max speed: " + passengerPlane
-                .sortByMaxSpeed()
+                .getMilitaryPlanes()
                 .toString());
 
-        System.out.println("Plane with max passenger capacity: " + passengerPlane
+        System.out.println("Passenger plane sorted by max speed: " + airport
+                .sortByMaxSpeed()
+                .getPassengerPlanes()
+                .toString());
+
+        System.out.println("Plane with max passenger capacity: " + airport
                 .getPassengerPlaneWithMaxPassengersCapacity());
     }
 }

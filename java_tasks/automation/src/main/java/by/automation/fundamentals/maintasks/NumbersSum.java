@@ -1,11 +1,11 @@
-package by.automation.fundamentals.task4;
+package by.automation.fundamentals.maintasks;
 
 //Ввести целые числа как аргументы командной строки, подсчитать их сумму (произведение) и
 // вывести результат на консоль.
 
-import InputFromConsole.InputFromConsole;
+import by.automation.fundamentals.input.InputFromConsole;
 
-public class Task4 {
+public class NumbersSum {
     public static void main(String[] args) {
         InputFromConsole inputFromConsole = new InputFromConsole();
         int a = inputFromConsole.inputNumber("Enter number");

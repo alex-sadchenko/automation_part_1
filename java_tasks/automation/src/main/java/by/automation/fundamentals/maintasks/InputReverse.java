@@ -1,10 +1,10 @@
-package by.automation.fundamentals.task2;
+package by.automation.fundamentals.maintasks;
 
 //Отобразить в окне консоли аргументы командной строки в обратном порядке.
 
-import InputFromConsole.InputFromConsole;
+import by.automation.fundamentals.input.InputFromConsole;
 
-public class Task2 {
+public class InputReverse {
     public static void main(String[] args) {
         InputFromConsole inputFromConsole = new InputFromConsole();
         StringBuffer name = new StringBuffer(inputFromConsole.inputLine("Enter data"));

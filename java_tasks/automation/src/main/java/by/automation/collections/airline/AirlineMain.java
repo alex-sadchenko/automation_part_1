@@ -11,7 +11,7 @@ import java.util.List;
 //вместимость и грузоподъемность. Провести сортировку самолетов компании по дальности полета.
 //Найти самолет в компании, соответствующий заданному диапазону параметров потребления горючего.
 
-public class Main {
+public class AirlineMain {
     public static void main(String[] args) {
         Initialisation initialisation = new Initialisation();
         List<Aircraft> aircraftList = new ArrayList<>();

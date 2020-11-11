@@ -1,11 +1,11 @@
-package by.automation.collections.optionaltasks.task1;
+package by.automation.collections.optionaltasks.stringreverse;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
 //Ввести строки из файла, записать в список. Вывести строки в файл в обратном порядке.
-public class Task1 {
+public class StringReverse {
     public static void main(String[] args) {
         String separator = File.separator;
         File file = new File("src" + separator + "main" +

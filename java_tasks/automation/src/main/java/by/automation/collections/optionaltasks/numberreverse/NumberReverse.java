@@ -1,9 +1,9 @@
-package by.automation.collections.optionaltasks.task2;
+package by.automation.collections.optionaltasks.numberreverse;
 
-import InputFromConsole.InputFromConsole;
+import by.automation.fundamentals.input.InputFromConsole;
 
 //Ввести число, занести его цифры в стек. Вывести число, у которого цифры идут в обратном порядке
-public class Task2 {
+public class NumberReverse {
     public static void main(String[] args) {
         InputFromConsole inputFromConsole = new InputFromConsole();
         NumberLogic numberLogic = new NumberLogic();

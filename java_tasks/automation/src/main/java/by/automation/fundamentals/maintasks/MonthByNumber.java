@@ -1,16 +1,15 @@
-package by.automation.fundamentals.task5;
+package by.automation.fundamentals.maintasks;
 
 // Ввести число от 1 до 12. Вывести на консоль название месяца, соответствующего данному числу.
 // Осуществить проверку корректности ввода чисел.
 
-import InputFromConsole.InputFromConsole;
+import by.automation.fundamentals.input.InputFromConsole;
 
-public class Task5 {
+public class MonthByNumber {
     public static void main(String[] args) {
         InputFromConsole inputFromConsole = new InputFromConsole();
-        int month = inputFromConsole.inputNumber("Enter number from 1 to 12");
 
-        switch (month) {
+        switch (inputFromConsole.inputNumber("Enter number from 1 to 12")) {
             case 1:
                 System.out.println("January");
                 break;

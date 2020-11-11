@@ -1,4 +1,4 @@
-package by.automation.collections.optionaltasks.task1;
+package by.automation.collections.optionaltasks.stringreverse;
 
 import java.io.*;
 import java.util.*;
