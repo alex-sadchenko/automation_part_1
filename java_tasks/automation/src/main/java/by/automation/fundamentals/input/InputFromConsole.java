@@ -1,4 +1,4 @@
-package InputFromConsole;
+package by.automation.fundamentals.input;
 
 import java.util.Scanner;
 

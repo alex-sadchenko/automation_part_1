@@ -9,8 +9,7 @@ public class CargoAircraft extends Aircraft {
     int maxLoadKilograms;
     private String aircraftRegistrationNumber;
 
-    public CargoAircraft() {
-    }
+    public CargoAircraft() { super(); }
 
     public CargoAircraft(CargoAircraftModel cargoAircraftModel, String aircraftRegistrationNumber) {
         super(cargoAircraftModel.getRangeKilometers(), cargoAircraftModel.getFuelConsumptionKgPerOur());

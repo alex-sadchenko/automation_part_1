@@ -1,10 +1,10 @@
 package by.automation.classes.student;
 
-import InputFromConsole.InputFromConsole;
+import by.automation.fundamentals.input.InputFromConsole;
 
 import java.time.LocalDate;
 
-public class Main {
+public class StudentMain {
     public static void main(String[] args) {
         University university = new University();
 

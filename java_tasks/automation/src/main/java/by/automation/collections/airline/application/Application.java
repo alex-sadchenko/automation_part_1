@@ -1,6 +1,6 @@
 package by.automation.collections.airline.application;
 
-import InputFromConsole.InputFromConsole;
+import by.automation.fundamentals.input.InputFromConsole;
 import by.automation.collections.airline.Airline;
 
 public class Application {
