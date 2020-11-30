@@ -6,8 +6,10 @@ import by.automation.collections.airline.aircraft.PassengerAircraft;
 import by.automation.collections.airline.models.CargoAircraftModel;
 import by.automation.collections.airline.models.PassengerAircraftModel;
 
-import java.io.*;
-import java.net.URISyntaxException;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,9 +19,8 @@ public class Initialisation {
         String separator = File.separator;
         File filePassengerAircraft = new File("src" + separator + "main" +
                 separator + "resources" + separator + "files" + separator + "PassengerAircraft");
-        try {
-            FileReader fileReaderPassengerAircraft = new FileReader(filePassengerAircraft);
-            BufferedReader bufferedReaderPassengerAircraft = new BufferedReader(fileReaderPassengerAircraft);
+
+        try (BufferedReader bufferedReaderPassengerAircraft = new BufferedReader( new FileReader(filePassengerAircraft))){
 
             while (bufferedReaderPassengerAircraft.ready()) {
                 String[] parameter = bufferedReaderPassengerAircraft.readLine().split(",");
@@ -41,9 +42,7 @@ public class Initialisation {
         File fileCargoAircraft = new File("src" + separator + "main" +
                 separator + "resources" + separator + "files" + separator + "CargoAircraft");
 
-        try {
-            FileReader fileReaderCargoAircraft = new FileReader(fileCargoAircraft);
-            BufferedReader bufferedReaderCargoAircraft = new BufferedReader(fileReaderCargoAircraft);
+        try (BufferedReader bufferedReaderCargoAircraft = new BufferedReader( new FileReader(fileCargoAircraft))){
 
             while (bufferedReaderCargoAircraft.ready()) {
                 String[] parameter = bufferedReaderCargoAircraft.readLine().split(",");
