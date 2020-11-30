@@ -19,9 +19,13 @@ public class MilitaryPlane extends Plane{
 
     @Override
     public String toString() {
-        return super.toString().replace("}",
-                ", type=" + militaryType +
-                '}');
+        return "MilitaryPlane{" +
+                "model='" + super.getModel() + '\'' +
+                ", maxSpeed=" + super.getMaxSpeed() +
+                ", maxFlightDistance=" + super.getMaxFlightDistance() +
+                ", maxLoadCapacity=" + super.getMaxLoadCapacity() +
+                ", militaryType=" + militaryType +
+                '}';
     }
 
     @Override
