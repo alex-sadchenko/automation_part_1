@@ -1,17 +1,17 @@
-import org.testng.annotations.BeforeTest;
-import planes.ExperimentalPlane;
 import classifications.ClassificationLevel;
 import classifications.ExperimentalType;
 import classifications.MilitaryType;
 import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import planes.ExperimentalPlane;
 import planes.MilitaryPlane;
 import planes.PassengerPlane;
 import planes.Plane;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
 
 public class AirportTest {
@@ -92,10 +92,11 @@ public class AirportTest {
 
     @Test
     public void testExperimentalPlanesHasClassificationLevelHigherThanUnclassified() {
-        List<ClassificationLevel> experimentalPlaneClassificationTypes = Arrays.asList(
-                airport.getExperimentalPlanes().get(0).getClassificationLevel(),
-                airport.getExperimentalPlanes().get(1).getClassificationLevel()
-        );
+        List<ClassificationLevel> experimentalPlaneClassificationTypes = new ArrayList<>();
+        for (ExperimentalPlane experimentalPlane : airport.getExperimentalPlanes()){
+            experimentalPlaneClassificationTypes.add(experimentalPlane.getClassificationLevel());
+        }
+
         Assert.assertFalse(experimentalPlaneClassificationTypes.contains(ClassificationLevel.UNCLASSIFIED));
     }
 }
